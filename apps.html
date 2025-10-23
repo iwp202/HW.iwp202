@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apps - AI Applications</title>
+  <link rel="stylesheet" href="Style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>تطبيقات الذكاء الاصطناعي</h1>
+    <p>اكتشف مجموعتنا من تطبيقات الذكاء الاصطناعي</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="AboutUs.html">AboutUs</a>
+    <a href="apps.html" class="active">Apps</a>
+    <a href="add_app.html">Add_App</a>
+  </nav>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="container">
+    <h1>تطبيقات الذكاء الاصطناعي</h1>
+    
+    <!-- جدول التطبيقات -->
+    <table id="appsTable" class="apps-table">
+      <thead>
+        <tr>
+          <th>اسم التطبيق</th>
+          <th>اسم الشركة المطورة</th>
+          <th>مجال الاستخدام</th>
+          <th>مجاني</th>
+          <th>إظهار التفاصيل</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- التطبيق 1 -->
+        <tr>
+          <td>ChatGPT</td>
+          <td>OpenAI</td>
+          <td>Education</td>
+          <td>نعم</td>
+          <td>
+            <button class="toggle-details" data-app="1">إظهار التفاصيل</button>
+          </td>
+        </tr>
+        <tr class="app-details" id="details-1" style="display: none;">
+          <td colspan="5">
+            <div class="details-content">
+              
+              <!-- المعلومات الأساسية -->
+              <div class="basic-info">
+                <div class="website-info">
+                  <strong>للوصول إلى الموقع الإلكتروني:</strong>
+                  <p>https://chat.openai.com</p>
+                </div>
+                <div class="description-info">
+                  <strong>شرح مختصر:</strong>
+                  <p>روبوت محادثة ذكي يمكنه الإجابة على الأسئلة والمساعدة في المهام المختلفة</p>
+                </div>
+              </div>
+
+              <!-- الوسائط - صورة على اليمين وصوت على اليسار -->
+              <div class="media-row">
+                <div class="audio-section">
+                  <strong>شرح صوتي:</strong>
+                  <audio controls>
+                    <source src="./chatgpt-explanation.mp3" type="audio/mpeg">
+                    
+                  </audio>
+                  <p class="media-note"><em>شرح عن تطبيق ChatGPT</em></p>
+                </div>
+                <div class="logo-section">
+                  <strong>صورة الشعار (Logo):</strong>
+                  <img src="./chatgpt-logo.jpg" alt="ChatGPT Logo" class="app-logo">
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+
+        <!-- التطبيق 2 -->
+        <tr>
+          <td>Midjourney</td>
+          <td>Midjourney Inc.</td>
+          <td>Design</td>
+          <td>لا</td>
+          <td>
+            <button class="toggle-details" data-app="2">إظهار التفاصيل</button>
+          </td>
+        </tr>
+        <tr class="app-details" id="details-2" style="display: none;">
+          <td colspan="5">
+            <div class="details-content">
+              
+              <!-- المعلومات الأساسية -->
+              <div class="basic-info">
+                <div class="website-info">
+                  <strong>للوصول إلى الموقع الإلكتروني:</strong>
+                  <p>https://www.midjourney.com</p>
+                </div>
+                <div class="description-info">
+                  <strong>شرح مختصر:</strong>
+                  <p>أداة ذكاء اصطناعي لإنشاء الصور من النصوص المكتوبة</p>
+                </div>
+              </div>
+
+              <!-- الوسائط - صورة على اليمين وصوت على اليسار -->
+              <div class="media-row">
+                <div class="audio-section">
+                  <strong>شرح صوتي:</strong>
+                  <audio controls>
+                    <source src="./midjourney-explanation.mp3" type="audio/mpeg">
+            
+                  </audio>
+                  <p class="media-note"><em>شرح عن تطبيق Midjourney</em></p>
+                </div>
+                <div class="logo-section">
+                  <strong>صورة الشعار (Logo):</strong>
+                  <img src="./midjourney-logo.jpg" alt="Midjourney Logo" class="app-logo">
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+
+        <!-- التطبيق 3 -->
+        <tr>
+          <td>GitHub Copilot</td>
+          <td>GitHub</td>
+          <td>Programming</td>
+          <td>لا</td>
+          <td>
+            <button class="toggle-details" data-app="3">إظهار التفاصيل</button>
+          </td>
+        </tr>
+        <tr class="app-details" id="details-3" style="display: none;">
+          <td colspan="5">
+            <div class="details-content">
+              
+              <!-- المعلومات الأساسية -->
+              <div class="basic-info">
+                <div class="website-info">
+                  <strong>للوصول إلى الموقع الإلكتروني:</strong>
+                  <p>https://github.com/features/copilot</p>
+                </div>
+                <div class="description-info">
+                  <strong>شرح مختصر:</strong>
+                  <p>مساعد ذكي للبرمجة يساعد المطورين في كتابة الكود بشكل أسرع</p>
+                </div>
+              </div>
+
+              <!-- الوسائط - صورة على اليمين وصوت على اليسار -->
+              <div class="media-row">
+                <div class="audio-section">
+                  <strong>شرح صوتي:</strong>
+                  <audio controls>
+                    <source src="./copilot-explanation.mp3" type="audio/mpeg">
+                    
+                  </audio>
+                  <p class="media-note"><em>شرح عن تطبيق GitHub Copilot</em></p>
+                </div>
+                <div class="logo-section">
+                  <strong>صورة الشعار (Logo):</strong>
+                  <img src="./copilot-logo.jpg" alt="GitHub Copilot Logo" class="app-logo">
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+
+        <!-- التطبيق 4 -->
+        <tr>
+          <td>Google Bard</td>
+          <td>Google</td>
+          <td>Research</td>
+          <td>نعم</td>
+          <td>
+            <button class="toggle-details" data-app="4">إظهار التفاصيل</button>
+          </td>
+        </tr>
+        <tr class="app-details" id="details-4" style="display: none;">
+          <td colspan="5">
+            <div class="details-content">
+              
+              <!-- المعلومات الأساسية -->
+              <div class="basic-info">
+                <div class="website-info">
+                  <strong>للوصول إلى الموقع الإلكتروني:</strong>
+                  <p>https://bard.google.com</p>
+                </div>
+                <div class="description-info">
+                  <strong>شرح مختصر:</strong>
+                  <p>مساعد ذكي من جوجل للمساعدة في البحث والإجابة على الأسئلة</p>
+                </div>
+              </div>
+
+              <!-- الوسائط - صورة على اليمين وصوت على اليسار -->
+              <div class="media-row">
+                <div class="audio-section">
+                  <strong>شرح صوتي:</strong>
+                  <audio controls>
+                    <source src="./bard-explanation.mp3" type="audio/mpeg">
+                    
+                  </audio>
+                  <p class="media-note"><em>شرح عن تطبيق Google Bard</em></p>
+                </div>
+                <div class="logo-section">
+                  <strong>صورة الشعار (Logo):</strong>
+                  <img src="./bard-logo.jpg" alt="Google Bard Logo" class="app-logo">
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+
+        <!-- التطبيق 5 -->
+        <tr>
+          <td>DALL-E</td>
+          <td>OpenAI</td>
+          <td>Design</td>
+          <td>لا</td>
+          <td>
+            <button class="toggle-details" data-app="5">إظهار التفاصيل</button>
+          </td>
+        </tr>
+        <tr class="app-details" id="details-5" style="display: none;">
+          <td colspan="5">
+            <div class="details-content">
+              
+              <!-- المعلومات الأساسية -->
+              <div class="basic-info">
+                <div class="website-info">
+                  <strong>للوصول إلى الموقع الإلكتروني:</strong>
+                  <p>https://openai.com/dall-e</p>
+                </div>
+                <div class="description-info">
+                  <strong>شرح مختصر:</strong>
+                  <p>نموذج ذكاء اصطناعي لإنشاء الصور من الوصف النصي</p>
+                </div>
+              </div>
+
+              <!-- الوسائط - صورة على اليمين وصوت على اليسار -->
+              <div class="media-row">
+                <div class="audio-section">
+                  <strong>شرح صوتي:</strong>
+                  <audio controls>
+                    <source src="./dalle-explanation.mp3" type="audio/mpeg">
+                    
+                  </audio>
+                  <p class="media-note"><em>شرح عن تطبيق DALL-E</em></p>
+                </div>
+                <div class="logo-section">
+                  <strong>صورة الشعار (Logo):</strong>
+                  <img src="./dalle-logo.jpg" alt="DALL-E Logo" class="app-logo">
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- الفوتر -->
+  <footer class="main-footer">
+    <p>2025 WebTelcom Company. All rights reserved</p>
+  </footer>
+<script>
+  $(document).ready(function () {
+
+    // ✅ دالة موحدة لإظهار/إخفاء التفاصيل لأي زر يتم الضغط عليه
+    $(document).on('click', '.toggle-details', function () {
+      var appId = $(this).data('app');
+      var detailsRow = $('#details-' + appId);
+
+      if (detailsRow.is(':visible')) {
+        detailsRow.hide();
+        $(this).text('إظهار التفاصيل');
+      } else {
+        detailsRow.show();
+        $(this).text('إخفاء التفاصيل');
+      }
+    });
+
+    // ✅ تحميل التطبيقات من localStorage
+    const apps = JSON.parse(localStorage.getItem('apps') || '[]');
+    const tableBody = document.querySelector('#appsTable tbody');
+    let startId = 6; // رقم يبدأ بعد التطبيقات الأساسية
+
+    apps.forEach((app, index) => {
+      const appId = startId + index;
+
+      const mainRow = document.createElement('tr');
+      mainRow.innerHTML = `
+        <td>${app.name}</td>
+        <td>${app.company}</td>
+        <td>${app.usage}</td>
+        <td>${app.free}</td>
+        <td>
+          <button class="toggle-details" data-app="${appId}">إظهار التفاصيل</button>
+        </td>
+      `;
+
+      const detailsRow = document.createElement('tr');
+      detailsRow.className = 'app-details';
+      detailsRow.id = `details-${appId}`;
+      detailsRow.style.display = 'none';
+      detailsRow.innerHTML = `
+        <td colspan="5">
+          <div class="details-content">
+            <div class="basic-info">
+              <div class="website-info">
+                <strong>للوصول إلى الموقع الإلكتروني:</strong>
+                <p>${app.website || 'لا يوجد'}</p>
+              </div>
+              <div class="description-info">
+                <strong>شرح مختصر:</strong>
+                <p>${app.description || 'لا يوجد وصف متاح'}</p>
+              </div>
+            </div>
+            <div class="media-row">
+              <div class="audio-section">
+                <strong>شرح صوتي:</strong>
+                <p><em>لا يوجد شرح صوتي لهذا التطبيق</em></p>
+              </div>
+              <div class="logo-section">
+                <strong>صورة الشعار (Logo):</strong>
+                <p><em>لا توجد صورة شعار</em></p>
+              </div>
+            </div>
+          </div>
+        </td>
+      `;
+
+      tableBody.appendChild(mainRow);
+      tableBody.appendChild(detailsRow);
+    });
+  });
+</script>
+
+ 
+
+</body>
+</html>

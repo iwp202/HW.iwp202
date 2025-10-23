@@ -1,0 +1,329 @@
+/* إعادة تعيين بعض الإعدادات الافتراضية للمتصفحات */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* إعداد الخط والخلفية العامة للصفحة */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* رأس الصفحة */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* عنوان رئيسي */
+h1 {
+  margin-bottom: 10px;
+}
+
+/* التنقل */
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+/* محتوى رئيسي */
+main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* الفقرات */
+p {
+  margin-bottom: 10px;
+}
+
+/* عناصر الإدخال */
+#d1 {
+  background-color: #0f3460;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#t1, #t2 {
+  background-color: #78a4d5;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1em;
+  outline: none;
+}
+
+.url2{
+  background-color: #78a4d5;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1em;
+  outline: none;
+}
+
+/* أزرار عامة */
+button,
+.sub1,
+.ret1 {
+  background-color: #0a64cb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover,
+.sub1:hover,
+.ret1:hover {
+  background-color: #021c3a;
+}
+
+#usage
+{
+background-color:#78a4d5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#description
+{
+background-color:#78a4d5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* تذييل */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* ========================================================= */
+/* 📋 تنسيقات صفحة التطبيقات (apps.html) */
+/* ========================================================= */
+
+/* الجدول الأساسي */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 15px;
+}
+
+thead th {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+/* زر Show Details */
+.toggle-details {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-details:hover {
+  background-color: #0056b3;
+}
+
+/* صندوق التفاصيل */
+.details-content {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  text-align: right;
+}
+
+/* فقرات التفاصيل */
+.details-content p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* الصورة والصوت بنفس السطر */
+.media-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+  flex-direction: row-reverse;
+}
+
+.media-row img {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  max-width: 150px;
+}
+
+.media-row audio {
+  border-radius: 10px;
+  max-width: 260px;
+}
+
+/* تأثير بسيط عند تمرير الفأرة على الصفوف */
+tbody tr:hover {
+  background-color: #f1f8ff;
+  transition: 0.3s;
+}
+
+.app-logo {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+}
+
+.website-info,
+.description-info {
+  background: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-right: 4px solid #3498db;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+  .media-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* ================================= */
+/* تنسيقات جديدة للصورة والصوت */
+/* ================================= */
+
+.media-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.audio-section {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #e3f2fd;
+}
+
+.logo-section {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #e3f2fd;
+}
+
+.audio-section strong,
+.logo-section strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.audio-section audio {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+.logo-section img {
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #3498db;
+  padding: 5px;
+  background: white;
+}
+
+.media-note {
+  color: #666;
+  font-size: 0.85em;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+  .media-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .audio-section,
+  .logo-section {
+    width: 100%;
+  }
+}

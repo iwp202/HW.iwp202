@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Application</title>
+  <link rel="stylesheet" href="Style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1>اضافة تطبيق ذكاء صنعي </h1>
+    <p>يمكنك عبر هذا النموذج اضافة تطبيق ذكاء صنعي</p> 
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="AboutUs.html">AboutUs</a>
+    <a href="apps.html">Apps</a>
+    <a href="add_app.html">Add App</a>
+  </nav>
+  <form>
+    <p>اسم التطبيق </p><input type="text" name="name_app" placeholder="name_app" size="15" required
+      pattern="[A-Za-z]+" id="t1" />
+    <br />
+    <p>الشركة المطورة </p><input type="text" name=" company" placeholder=" company" size="15" required
+      pattern="[A-Za-z]+" id="t2" />
+    <br />
+    <p>الموقع الالكتروني </p> <input type="url" id="website" name="website" placeholder="https://example.com" required
+      size="15" class="url2">
+    <br />
+    <br />
+    <p>هل التطبيق مجاني </p>
+    <p>مجاني &nbsp; : &nbsp; <input type="checkbox" name="is_free" value="free" id="checkbox" /></p>
+    <label for="usage">اختر مجال الاستخدام</label>
+    <select id="usage" name="usage">
+      <option value="none">----------</option>
+      <option value="ecommerce">E-Commerce</option>
+      <option value="education">Education</option>
+      <option value="robotics">Robotics</option>
+    </select>
+
+    <p> : ادخل وصف للموقع </p><textarea id="description" name="description" rows="4" cols="50" placeholder="Description"
+      required></textarea>
+    </p>
+    <br /><input type="submit" value="Send" class="sub1" />
+    <input type="Reset" class="ret1" />
+
+<script>
+    // لما يتم إرسال النموذج
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // منع الإرسال التلقائي
+
+        const app = {
+            name: document.getElementById('t1').value,
+            company: document.getElementById('t2').value,
+            website: document.getElementById('website').value,
+            free: document.getElementById('checkbox').checked ? "نعم" : "لا",
+            usage: document.getElementById('usage').value,
+            description: document.getElementById('description').value
+        };
+
+        // حفظ البيانات في Local Storage
+        let apps = JSON.parse(localStorage.getItem('apps') || '[]');
+        apps.push(app);
+        localStorage.setItem('apps', JSON.stringify(apps));
+
+        // الانتقال لصفحة عرض التطبيقات
+        window.location.href = 'apps.html';
+    });
+</script>
+
+</body>
+
+</html>

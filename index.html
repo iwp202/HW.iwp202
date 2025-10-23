@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - AI Applications</title>
+  <link rel="stylesheet" href="Style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>IWP202 - AI Applications</h1>
+    <p>موقع تعريفي بتطبيقات الذكاء الاصطناعي </p>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="AboutUs.html">AboutUs</a>
+    <a href="apps.html">Apps</a>
+    <a href="add_app.html">Add App</a>
+  </nav>
+
+  <main class="container">
+    <section class="intro-section">
+      <h2>حول التطبيق </h2>
+      <p>نحن شركة ويبتلكوم تهتم بالمواقع و تطبيقات الذكاء الصنعي.</p>
+      <button id="welcomeBtn" class="cta-button">Click Here</button>
+    </section>
+
+    <!-- جدول أعضاء المجموعة -->
+    <section class="table-section">
+      <h2>أعضاء المجموعة </h2>
+      <table class="members-table">
+        <thead>
+          <tr>
+            <th>Arabic Name</th>
+            <th>English Name</th>
+            <th>Student ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>نور حوران</td>
+            <td>nour horan</td>
+            <td>nour_302937</td>
+          </tr>
+          <tr>
+            <td>أسماء الكايد</td>
+            <td>asmaa alkayed</td>
+            <td>asmaa_289578</td>
+          </tr>
+          <tr>
+            <td>عدنان حجازي الميداني</td>
+            <td>Adnan Hijazi Al-Midani</td>
+            <td>adnan_239302</td>
+          </tr>
+          <tr>
+            <td>أية محمد خالد حموده</td>
+            <td>Aya Mhd Khaled Hamouda</td>
+            <td>aya_249267</td>
+          </tr>
+          <tr>
+            <td>عمر قاسم الخضري</td>
+            <td>Omar kasem lkhodari</td>
+            <td>omar_228580</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- قسم رابط النشر -->
+    <section class="link-section">
+      <h2>رابط الموقع :</h2>
+      <div class="link-container">
+        <a href="https://your-website-link.com" target="_blank" class="site-link">
+          Click to visit live website
+        </a>
+        <p class="link-note">Link will be updated after hosting</p>
+      </div>
+    </section>
+
+    <!-- قسم الملاحظات الشخصية -->
+    <section class="notes-section">
+      <h2>ملاحظات شخصية :</h2>
+      <div class="notes-grid">
+        <div class="note-card">
+          <h4>نور حوران</h4>
+          <p>أنا نور، أحب تطوير المواقع وأطمح للعمل في مجال الذكاء الاصطناعي.</p>
+        </div>
+        <div class="note-card">
+          <h4>أسماء الكايد</h4>
+          <p>أنا أسماء، أدرس في الجامعة الافتراضية وأهتم بتصميم واجهات المستخدم.</p>
+        </div>
+        <div class="note-card">
+          <h4>عدنان حجازي الميداني</h4>
+          <p>أنا عدنان، مهتم بالأمن السيبراني والذكاء الاصطناعي.</p>
+        </div>
+        <div class="note-card">
+          <h4>أية محمد خالد حموده</h4>
+          <p>أنا أية، أدرس في الجامعة الافتراضية و مهتمة في تطوير الواجهات الأمامية.</p>
+        </div>
+        <div class="note-card">
+          <h4>عمر قاسم الخضري</h4>
+          <p>أنا عمر، أدرس في الجامعة الافتراضية و مهتم في تطوير تطبيقات الويب و الموبايل.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 WebTelcom Company. All rights reserved</p>
+    <p>Web Applications Design & Development Project - IWP202</p>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // تأثير الزر الترحيبي
+      $('#welcomeBtn').click(function() {
+        alert('Thank you for visiting our website! We wish you a great experience.');
+      });
+      
+      // تأثير عند التمرير على البطاقات
+      $('.note-card').hover(
+        function() {
+          $(this).css('transform', 'translateY(-5px)');
+        },
+        function() {
+          $(this).css('transform', 'translateY(0)');
+        }
+      );
+
+      // تأثير على صفوف الجدول
+      $('.members-table tr').hover(
+        function() {
+          $(this).css('background-color', '#f0f8ff');
+        },
+        function() {
+          $(this).css('background-color', '');
+        }
+      );
+    });
+  </script>
+
+</body>
+</html>
